@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import "antd-mobile/dist/antd-mobile.css"
-import { Button, List, InputItem, WhiteSpace, WingBlank,Icon} from "antd-mobile"
+import { Button, List, InputItem, WhiteSpace, WingBlank,Icon,NoticeBar} from "antd-mobile"
 
 export default class LoginForm extends Component{
     constructor(props) {
@@ -16,26 +16,46 @@ export default class LoginForm extends Component{
         console.log(password);
 
     }
-    render(){
+    render() {
+        let fail=true
+        let noticeBar=""
+        if(fail){
+            noticeBar=<NoticeBar
+                mode="closable"
+                icon={<Icon type="cross-circle" size="xxs" />}
+            >
+                Wrong password.
+            </NoticeBar>
+        }
         return (
             <div>
                 <WingBlank size="lg">
                     <div>
-                        <WhiteSpace size="xl"/>
+                        <WhiteSpace size="xl" />
                         <List>
-                            <InputItem placeholder="Your name" ref={this.userName}>
+                            <InputItem
+                                placeholder="Your name"
+                                ref={this.userName}
+                            >
                                 User
                             </InputItem>
                             <InputItem
-                                type="password" placeholder="Your password" ref={this.pwd}>
+                                type="password"
+                                placeholder="Your password"
+                                ref={this.pwd}
+                            >
                                 Password
                             </InputItem>
                         </List>
-                        <WhiteSpace size="xl"/>
-                        <Button type="primary" onClick={this.login}>Login</Button>
+                        <WhiteSpace size="xs" />
+                        {noticeBar}
+                        <WhiteSpace size="md" />
+                        <Button type="primary" onClick={this.login}>
+                            Login
+                        </Button>
                     </div>
                 </WingBlank>
             </div>
-        )
+        );
     }
 }
