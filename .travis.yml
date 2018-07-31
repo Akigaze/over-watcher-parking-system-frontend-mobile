@@ -1,0 +1,8 @@
+language: javaScript
+
+script: true
+
+deploy:
+ provider: heroku
+ api_key: 4cb60d36-426f-4609-a891-70f22d5b0343
+ app: over-fron
