@@ -1,8 +1,8 @@
-import React,Component from 'react'
+import React,{Component} from 'react'
 import "antd-mobile/dist/antd-mobile.css"
 import { Button, List, InputItem, WhiteSpace, WingBlank,Icon} from "antd-mobile"
 
-export default class LoginFrom {
+export default class LoginForm extends Component{
     constructor(props) {
         super(props)
     }
