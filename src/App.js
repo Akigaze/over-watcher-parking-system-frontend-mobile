@@ -10,6 +10,7 @@ import {
     Icon
 } from "antd-mobile";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import Interface from "./components/Interface";
 
 class App extends Component {
     render() {
@@ -29,7 +30,7 @@ const loginPage = (match) => {
     return <LoginForm history={match.history}/>;
 };
 const userPage = () => {
-    return <h1>hihao</h1>;
+    return <Interface/>;
 };
 
 export default App;
