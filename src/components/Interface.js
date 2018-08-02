@@ -1,12 +1,13 @@
 import React,{Component} from "react";
 import {NavBar, TabBar} from "antd-mobile"
 import Scramble from "./Scramble ";
+import Order from "./Order";
 
 export default class Interface extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'redTab',
+            selectedTab: 'yellowTab',
         };
     }
 
@@ -68,7 +69,8 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <NavBar>停取</NavBar>
+                        <NavBar>停取工作列表</NavBar>
+                        <Order/>
                         {/*{this.renderContent('停取')}*/}
                     </TabBar.Item>
                     <TabBar.Item
