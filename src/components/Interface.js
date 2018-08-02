@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import {NavBar, TabBar} from "antd-mobile"
 import Scramble from "./Scramble ";
 import Order from "./Order";
+import QiangDanBar from "../containers/QiangDanBarContainer"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ export default class Interface extends Component {
     }
 
     render() {
+        console.log("1111111"+this.props.orders);
         return (
             <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0  }}>
                 <TabBar
@@ -19,32 +21,33 @@ export default class Interface extends Component {
                     tintColor="#33A3F4"
                     barTintColor="white"
                 >
+                <TabBar.Item
+                            title="抢单"
+                            key="抢单"
+                            icon={<div style={{
+                                width: '22px',
+                                height: '22px',
+                                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+                            />
+                            }
+                            selectedIcon={<div style={{
+                                width: '22px',
+                                height: '22px',
+                                background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+                            />
+                            }
+                            selected={this.state.selectedTab === 'blueTab'}
+                            onPress={() => {
+                                this.props.clickQD()
+                                this.setState({
+                                    selectedTab: 'blueTab',
+                                });
+                            }}
+                        >
 
-                    <TabBar.Item
-                        title="抢单"
-                        key="抢单"
-                        icon={<div style={{
-                            width: '22px',
-                            height: '22px',
-                            background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
-                        />
-                        }
-                        selectedIcon={<div style={{
-                            width: '22px',
-                            height: '22px',
-                            background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
-                        />
-                        }
-                        selected={this.state.selectedTab === 'blueTab'}
-                        onPress={() => {
-                            this.setState({
-                                selectedTab: 'blueTab',
-                            });
-                        }}
-                    >
-                        <NavBar>订单</NavBar>
-                        <Scramble/>
-                    </TabBar.Item>
+                        <QiangDanBar orders={this.props.orders}/>
+                </TabBar.Item>
+
                     <TabBar.Item
                         icon={
                             <div style={{

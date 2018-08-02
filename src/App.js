@@ -10,7 +10,7 @@ import {
     Icon
 } from "antd-mobile";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import Interface from "./components/Interface";
+import Interface from "./containers/InterfaceContainer";
 
 class App extends Component {
     render() {
@@ -29,8 +29,8 @@ const loginPage = (match) => {
     console.log(match);
     return <LoginForm history={match.history}/>;
 };
-const userPage = () => {
-    return <Interface/>;
+const userPage = (match) => {
+    return <Interface match={match}/>;
 };
 
 export default App;
