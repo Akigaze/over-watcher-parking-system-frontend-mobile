@@ -17,17 +17,15 @@ export default class QiangDan extends Component {
     }
     render() {
         const boyId = window.localStorage.id;
-        console.log(this.props);
-        const { orders, onClickOrder } = this.props;
-        console.log(orders);
-        let orderList = this.props.orders.map(order => {
+        const { unFinishOrders, clickOrder } = this.props;
+        let orderList = unFinishOrders.map(order => {
             const { id, carId, createdDate } = order;
             return (
                 <Item
                     extra="抢单"
                     arrow="horizontal"
                     onClick={() => {
-                        onClickOrder(id, boyId);
+                        clickOrder(id, boyId);
                         this.showToast()
                     }}
                 >

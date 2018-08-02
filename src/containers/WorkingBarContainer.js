@@ -7,9 +7,6 @@ import WokingBar from '../components/WorkingBar'
 import boyApi from '../API/index'
 
 const mapStateToProps = (state, ownProps) =>{
-    console.log("----------")
-
-    console.log(state)
     return {
         works: state
     }

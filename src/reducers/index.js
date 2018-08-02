@@ -1,28 +1,26 @@
-export default (state = [], action) => {
+export default (
+    state = {
+    unFinishOrders:[],
+    works:[],
+    parkingLots:[]
+}, action) => {
     switch (action.type) {
         case "ASKORDERS": {
-            let newState = [...action.orders]
-            // let newState = []
-            console.log("reducers: ");
-            console.log(action.orders);
-
+            let {unFinishOrders,works,parkingLots}=state;
+            let newState = {unFinishOrders:[...action.orders],works,parkingLots}
             return newState;
         }
         case "SCRAMBLE": {
-            let newState = removeOrder([...state],action.order)
-            // let newState = []
-            console.log("SCRAMBLE: ");
-
-            console.log(newState);
-
+            let unFinishOrders=[...state.unFinishOrders]
+            let works=[...state.works]
+            let parkingLots=[...state.parkingLots]
+            let newUnFinishOrders = removeOrder(unFinishOrders,action.order)
+            const newState={unFinishOrders:newUnFinishOrders,works,parkingLots}
             return newState;
         }
         case "WORKING": {
-            let newState = [...action.orders]
-            // let newState = []
-            console.log("wwwwwwwwww ");
-            console.log(action.orders);
-
+            let {unFinishOrders,works,parkingLots}=state;
+            let newState = {unFinishOrders,works:action.works,parkingLots}
             return newState;
         }
         default:

@@ -18,7 +18,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Route exact path="/" component={loginPage} />
-                    <Route path="/employees" component={userPage} />
+                    <Route path="/employees**" component={userPage} />
                 </div>
             </BrowserRouter>
         );

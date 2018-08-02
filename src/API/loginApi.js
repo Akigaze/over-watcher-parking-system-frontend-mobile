@@ -8,6 +8,7 @@ export const LoginApi = {
                 password: password
             })
             .then(response => {
+                console.log("登录成功的结果\n----------------------")
                 console.log(response);
                 window.localStorage.token = response.data.token;
                 window.localStorage.roles = response.data.roles;
@@ -17,12 +18,8 @@ export const LoginApi = {
                 return "";
             })
             .catch(function(error) {
-                // this.setState({msg:"wrong password"});
-                // console.log(this.state)
-                // message.error('用户名或密码错误！',1);
                 console.log(error);
                 form.setState({msg:"wrong password"})
-
             });
     }
 };

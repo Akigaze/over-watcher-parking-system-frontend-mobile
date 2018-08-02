@@ -2,8 +2,12 @@ import React,{Component} from "react";
 import {NavBar, TabBar} from "antd-mobile"
 import Scramble from "./Scramble ";
 import Order from "./Order";
-import QiangDanBar from "../containers/QiangDanBarContainer"
-import WorkingBar from "../containers/WorkingBarContainer"
+// import QiangDanBar from "../containers/QiangDanBarContainer"
+// import WorkingBar from "../containers/WorkingBarContainer"
+import QiangDanBar from "./QiangDanBar"
+import WorkingBar from "./WorkingBar"
+import {BrowserRouter,Route} from 'react-router-dom'
+
 
 export default class Interface extends Component {
     constructor(props) {
@@ -14,7 +18,6 @@ export default class Interface extends Component {
     }
 
     render() {
-        console.log("1111111"+this.props.orders);
         return (
             <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0  }}>
                 <TabBar
@@ -44,9 +47,10 @@ export default class Interface extends Component {
                                     selectedTab: 'blueTab',
                                 });
                             }}
+                            dot
                         >
 
-                        <QiangDanBar orders={this.props.orders}/>
+                        <QiangDanBar unFinishOrders={this.props.unFinishOrders} clickOrder={this.props.onClickOrder}/>
                 </TabBar.Item>
 
                     <TabBar.Item
@@ -74,7 +78,12 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <WorkingBar orders={this.props.orders}/>
+                    <BrowserRouter>
+                        <Route path="/employees" component={()=>{
+                            return (<WorkingBar works={this.props.works}/>)
+                        }}/>
+                    </BrowserRouter>
+
                     </TabBar.Item>
                     <TabBar.Item
                         icon={

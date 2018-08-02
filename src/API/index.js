@@ -3,6 +3,8 @@ import axios from "axios";
 import Access_Token from "../constant/Access_token"
 
 axios.defaults.baseURL = 'http://localhost:9090'
+const token = window.localStorage.token;
+
 const boyApi = {
     datas: {
         orders: [],
@@ -11,9 +13,6 @@ const boyApi = {
         filter: "all"
     },
     qiangdan(dispatch, orderId, boyId) {
-        const token = window.localStorage.token;
-
-        console.log("id---------" + orderId + "====" + boyId);
         axios
             .put(
                  `http://localhost:9090/orders/${orderId}/parkingBoy/${boyId}`,
@@ -22,9 +21,9 @@ const boyApi = {
                  }
             )
             .then(response => {
+                console.log("点击一个订单进行抢单的请求结果\n----------------------")
                 console.log(response);
                 const order = response.data;
-                console.log("0000000"+order);
                 dispatch(scramble(order));
             })
             .catch(function(error) {
@@ -33,8 +32,11 @@ const boyApi = {
     },
     findAllOrders(dispatch) {
         axios
-            .get("http://localhost:9090/orders/status?status=无人处理")
+            .get("http://localhost:9090/orders/status?status=无人处理",{
+                headers:{"Authorization":token}
+            })
             .then(response => {
+                console.log("抢单按钮的请求结果\n----------------------")
                 console.log(response);
                 this.datas.orders = response.data.map(order => {
                     const { id, carId, createdDate } = order;
@@ -51,6 +53,7 @@ const boyApi = {
         axios
             .get(`http://localhost:9090/orders/after/${boyId}`)
             .then(response => {
+                console.log("点击存取按钮的请求结果\n----------------------")
                 console.log(response);
                 this.datas.works = response.data.map(order => {
                     const { id,type, carId, createdDate } = order;

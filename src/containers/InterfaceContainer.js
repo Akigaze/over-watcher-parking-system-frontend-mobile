@@ -7,16 +7,18 @@ import Interface from '../components/Interface'
 import boyApi from '../API/index'
 
 const mapStateToProps = (state, ownProps) =>{
-    console.log(state.props);
     return {
-        order:state.orders
+        unFinishOrders:state.unFinishOrders,
+        works:state.works,
+        parkingLots:state.parkingLots
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
     return {
         clickQD:()=>{boyApi.findAllOrders(dispatch)},
-        clickCQ:()=>{boyApi.findAllWork(dispatch)}
+        clickCQ:()=>{boyApi.findAllWork(dispatch)},
+        onClickOrder:(orderId,boyId)=>{boyApi.qiangdan(dispatch,orderId,boyId)}
 
     }
 }

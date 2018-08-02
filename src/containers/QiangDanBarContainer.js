@@ -8,9 +8,6 @@ import QiangDan from '../components/QiangDanBar'
 import boyApi from '../API/index'
 
 const mapStateToProps = (state, ownProps) =>{
-    console.log("----------")
-
-    console.log(state)
     return {
         orders: state
     }
