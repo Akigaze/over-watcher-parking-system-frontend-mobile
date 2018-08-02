@@ -1,58 +1,64 @@
-import React,{Component} from 'react'
-import "antd-mobile/dist/antd-mobile.css"
-import { Button, List, InputItem, WhiteSpace, WingBlank,Icon,NoticeBar} from "antd-mobile"
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import "antd-mobile/dist/antd-mobile.css";
+import {
+    Button,
+    List,
+    InputItem,
+    WhiteSpace,
+    WingBlank,
+    Icon,
+    NoticeBar
+} from "antd-mobile";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import {LoginApi} from '../API/loginApi'
 
-
-export default class LoginForm extends Component{
+export default class LoginForm extends Component {
     constructor(props) {
-        super(props)
-        this.userName=React.createRef()
-        this.pwd=React.createRef()
-        this.state={msg:""};
+        super(props);
+        this.userName = React.createRef();
+        this.pwd = React.createRef();
+        this.state = { msg: "" };
     }
 
-    login=()=>{
-        const name=this.userName.current.state.value
-        const password=this.pwd.current.state .value
+    login = () => {
+        const name = this.userName.current.state.value;
+        const password = this.pwd.current.state.value;
         console.log(name);
         console.log(password);
-        if(name===""||password===""){
+        if (name === "" || password === "") {
             // message.error('用户名或密码不能为空！',1);
-            this.setState({msg:"no username or password"});
-        }else{
-            axios.post('http://localhost:9090/auth/login', {
-                "username":name,
-                "password":password})
-                .then((response) => {
-                    console.log(response);
-                    this.props.history.push('/employees')
-                }).catch(function (error) {
-                    // this.setState({msg:"wrong password"});
-                    // console.log(this.state)
-                // message.error('用户名或密码错误！',1);
-                console.log(error);
-            });
+            this.setState({ msg: "no username or password" });
+        } else {
+            LoginApi.tryToLogin(name,password,this)
         }
-    }
+    };
 
-    closeNoticeBar=()=>{
-        console.log(this.state)
+    closeNoticeBar = () => {
+        console.log(this.state);
 
-        this.setState({msg:""})
-    }
+        this.setState({ msg: "" });
+    };
 
     render() {
-        let noticeBar=""
-        if(this.state.msg!==""){
-            noticeBar=<NoticeBar
-                mode="closable"
-                icon={<Icon type="cross-circle" size="xxs"
-                    onClick={()=>{this.closeNoticeBar()}}/>}
-            >
-                {this.state.msg}
-            </NoticeBar>
+        let noticeBar = "";
+        if (this.state.msg !== "") {
+            noticeBar = (
+                <NoticeBar
+                    mode="closable"
+                    icon={
+                        <Icon
+                            type="cross-circle"
+                            size="xxs"
+                        />
+                    }
+                    onClick={() => {
+                        this.closeNoticeBar();
+                    }}
+                >
+                    {this.state.msg}
+                </NoticeBar>
+            );
         }
         return (
             <div>
@@ -77,9 +83,9 @@ export default class LoginForm extends Component{
                         <WhiteSpace size="xs" />
                         {noticeBar}
                         <WhiteSpace size="md" />
-                            <Button type="primary" onClick={this.login}>
-                                Login
-                            </Button>
+                        <Button type="primary" onClick={this.login}>
+                            Login
+                        </Button>
                     </div>
                 </WingBlank>
             </div>

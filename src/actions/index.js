@@ -1,8 +1,8 @@
-export const login=(name,pwd)=>{
+export const login=(name,token)=>{
     return
     {
         type:LOGIN,
         name,
-        password:pwd
+        token
     }
 }

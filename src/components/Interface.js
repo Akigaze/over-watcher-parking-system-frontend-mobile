@@ -1,6 +1,5 @@
 import React,{Component} from "react";
 import {NavBar, TabBar} from "antd-mobile"
-import {Icon} from 'antd'
 import Scramble from "./Scramble ";
 
 export default class Interface extends Component {
