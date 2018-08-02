@@ -3,6 +3,7 @@ import {NavBar, TabBar} from "antd-mobile"
 import Scramble from "./Scramble ";
 import Order from "./Order";
 import QiangDanBar from "../containers/QiangDanBarContainer"
+import WorkingBar from "../containers/WorkingBarContainer"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -67,14 +68,13 @@ export default class Interface extends Component {
                         key="停取"
                         selected={this.state.selectedTab === 'redTab'}
                         onPress={() => {
+                            this.props.clickCQ()
                             this.setState({
                                 selectedTab: 'redTab',
                             });
                         }}
                     >
-                        <NavBar>停取工作列表</NavBar>
-                        <Order/>
-                        {/*{this.renderContent('停取')}*/}
+                        <WorkingBar orders={this.props.orders}/>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={

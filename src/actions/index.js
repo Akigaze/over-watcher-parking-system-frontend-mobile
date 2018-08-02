@@ -15,3 +15,7 @@ export const scramble = order => ({
     type: "SCRAMBLE",
     order
 });
+export const getWorkingList = orders => ({
+    type: "WORKING",
+    orders
+});

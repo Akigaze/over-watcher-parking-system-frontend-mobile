@@ -28,7 +28,7 @@ export default class QiangDan extends Component {
                     arrow="horizontal"
                     onClick={() => {
                         onClickOrder(id, boyId);
-                        this.showToast();
+                        this.showToast()
                     }}
                 >
                     车牌号：{carId}

@@ -15,7 +15,9 @@ const mapStateToProps = (state, ownProps) =>{
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
     return {
-        clickQD:()=>{boyApi.findAllOrders(dispatch)}
+        clickQD:()=>{boyApi.findAllOrders(dispatch)},
+        clickCQ:()=>{boyApi.findAllWork(dispatch)}
+
     }
 }
 

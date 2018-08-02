@@ -17,10 +17,12 @@ export default (state = [], action) => {
 
             return newState;
         }
-        case "ADD_TODO": {
-            let newState = JSON.parse(JSON.stringify(state));
-            newState.todos = [...action.todosObject.afeterHandleTodos];
-            console.log("add" + JSON.stringify(newState));
+        case "WORKING": {
+            let newState = [...action.orders]
+            // let newState = []
+            console.log("wwwwwwwwww ");
+            console.log(action.orders);
+
             return newState;
         }
         default:
