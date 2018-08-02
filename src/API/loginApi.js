@@ -11,6 +11,8 @@ export const LoginApi = {
                 console.log(response);
                 window.localStorage.token = response.data.token;
                 window.localStorage.roles = response.data.roles;
+                window.localStorage.id = response.data.id;
+                window.localStorage.username = response.data.username;
                 form.props.history.push("/employees");
                 return "";
             })

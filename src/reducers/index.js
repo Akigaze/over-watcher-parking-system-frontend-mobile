@@ -8,6 +8,15 @@ export default (state = [], action) => {
 
             return newState;
         }
+        case "SCRAMBLE": {
+            let newState = removeOrder([...state],action.order)
+            // let newState = []
+            console.log("SCRAMBLE: ");
+
+            console.log(newState);
+
+            return newState;
+        }
         case "ADD_TODO": {
             let newState = JSON.parse(JSON.stringify(state));
             newState.todos = [...action.todosObject.afeterHandleTodos];
@@ -18,3 +27,12 @@ export default (state = [], action) => {
             return state;
     }
 };
+
+const removeOrder=(orders,order)=>{
+    for(let i=0;i<orders.length;i++){
+        if(order.id==orders[i].id){
+            orders.splice(i,1);
+        }
+    }
+    return orders
+}

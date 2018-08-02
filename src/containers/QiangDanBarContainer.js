@@ -5,7 +5,7 @@ import axios from "axios";
 import {connect} from 'react-redux'
 import {filterTodo} from "../actions";
 import QiangDan from '../components/QiangDanBar'
-import qiangdan from '../API/index'
+import boyApi from '../API/index'
 
 const mapStateToProps = (state, ownProps) =>{
     console.log("----------")
@@ -18,7 +18,7 @@ const mapStateToProps = (state, ownProps) =>{
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
     return {
-        onQiangdan:(carId)=>{qiangdan(dispatch,carId)}
+        onClickOrder:(orderId,boyId)=>{boyApi.qiangdan(dispatch,orderId,boyId)}
     }
 }
 

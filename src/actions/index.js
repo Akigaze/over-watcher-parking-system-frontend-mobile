@@ -6,8 +6,12 @@ export const login=(name,token)=>{
         token
     }
 }
-export const getOrders=(orders)=>(
-    {
-        type:"ASKORDERS",
-        orders
-    })
+export const getOrders = orders => ({
+    type: "ASKORDERS",
+    orders
+});
+
+export const scramble = order => ({
+    type: "SCRAMBLE",
+    order
+});
