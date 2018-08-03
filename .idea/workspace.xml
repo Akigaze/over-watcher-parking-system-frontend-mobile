@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7730b7a-50e2-4af4-ab9e-cb80ae3d5252" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Interface.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interface.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ParkingLotList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingLotList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ParkingOrderFinishing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingOrderFinishing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WorkingBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkingBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -298,7 +290,7 @@
       <option name="presentableId" value="Default" />
       <updated>1533192090459</updated>
       <workItem from="1533192092057" duration="7353000" />
-      <workItem from="1533278498416" duration="705000" />
+      <workItem from="1533278498416" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="bale,quinn:mobile login">
       <created>1533192208252</created>
@@ -356,14 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1533278605546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[Quinn] get parking boy's parkingLots from server">
+      <created>1533281091123</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1533281091123</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8058000" />
+    <option name="totallyTimeSpent" value="8703000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -409,7 +408,8 @@
     <MESSAGE value="[Quinn] add scramble function" />
     <MESSAGE value="[Quinn] add find works" />
     <MESSAGE value="[Quinn] add select parkingLot page" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Quinn] add select parkingLot page" />
+    <MESSAGE value="[Quinn] get parking boy's parkingLots from server" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Quinn] get parking boy's parkingLots from server" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/index.js">
