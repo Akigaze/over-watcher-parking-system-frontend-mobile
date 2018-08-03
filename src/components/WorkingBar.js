@@ -18,9 +18,12 @@ export default class WorkingBar extends Component {
         const { works, onClickOrder } = this.props;
         console.log("我的待完成工作\n--------------------------");
         console.log(works)
+        let history=this.props.routerMatch.history;
+
         let workList = works.map(order => {
             const { id,type, carId, createdDate } = order;
             let path=`/employees/orders/${id}`;
+
             if(type=="存车"){
                 return (
                     <Link to={path}>
