@@ -9,13 +9,13 @@ export default class ParkingLotList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            parkingLotId: 0
+            parkingLot: {}
         };
     }
-    select = (id,size) => {
+    select = (lot,size) => {
         if(size!==0){
             this.setState({
-                parkingLotId: id
+                parkingLot: lot
             });
         }else{
             Toast.info('该停车场已经没有空位了 !!!', 1);
@@ -32,10 +32,10 @@ export default class ParkingLotList extends Component {
             return (
                 <RadioItem
                     key={id}
-                    checked={id == this.state.parkingLotId}
+                    checked={id == this.state.parkingLot.id}
                     onChange={() => {
                         console.log("=======  " + id + "  ===========");
-                        this.select(id,size);
+                        this.select(lot,size);
                     }}
                 >
                     {name} ( {size} / {initSize} )
@@ -46,7 +46,10 @@ export default class ParkingLotList extends Component {
             <div>
                 <NavBar
                     icon={<Icon type="left" />}
-                    onLeftClick={() => history.push("/employees")}
+                    onLeftClick={() =>
+                        {console.log("选择停车返回历史\n------------------");
+                        const orderId=match.params.orderId
+                        history.push(`/employees/orders/${orderId}`,this.state)}}
                 >
                     停车地点
                 </NavBar>

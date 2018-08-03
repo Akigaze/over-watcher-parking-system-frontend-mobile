@@ -23,7 +23,7 @@ export default class Interface extends Component {
     };
 
     finishParkingOrderPage=(match)=>{
-        return (<ParkingOrderFinishing routerMatch={match} selectParkingLots={this.props.findMyParkingLots}/>)
+        return (<ParkingOrderFinishing routerMatch={match} selectParkingLots={this.props.findMyParkingLots} finishOrder={this.props.nFinishOrder}/>)
     }
 
     myParkingLotPage=(match)=>{
@@ -134,7 +134,7 @@ export default class Interface extends Component {
                                 <Route
                                     path={`${
                                         this.props.match.match.url
-                                    }/:boyId/parkingLots`}
+                                    }/:boyId/orders/:orderId/parkingLots`}
                                     component={this.myParkingLotPage}
                                 />
                             </div>

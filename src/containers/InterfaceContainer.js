@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch, ownProps) =>{
         clickCQ:()=>{boyApi.findAllWork(dispatch)},
         onClickOrder:(orderId,boyId)=>{boyApi.qiangdan(dispatch,orderId,boyId)},
         findMyParkingLots:(boyId)=>{boyApi.getParkingLotsByBoyId(dispatch,boyId)},
-        OnFinishOrder:(parkingLotId,orderId)=>{boyApi.finishOrder(dispatch,parkingLotId,orderId)}
+        onFinishOrder:(parkingLotId,orderId)=>{boyApi.finishOrder(dispatch,parkingLotId,orderId)}
     }
 }
 

@@ -18,15 +18,38 @@ const Brief = Item.Brief;
 export default class ParkingOrderFinishing extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            selectedTab: "yellowTab"
+            parkingLot: {}
         };
     }
+
+    setParkingLot=()=>{
+        const {history,location,match}=this.props.routerMatch
+        const lot=location.state.parkingLot
+        this.setState({
+            parkingLot: lot
+        })
+        return lot;
+    }
+    finshiOrder=()=>{
+        const lot=this.setParkingLot();
+        const orderId=this.match.params.orderId
+        if(lot!={}){
+            this.props.finishOrder(lot.id,orderId)
+        }else{
+            Toast.info('未选择停车场 !!!', 1);
+        }
+    }
     render() {
-        console.log("完成订单页面\n----------------------");
-        console.log(this.props.routerMatch.match);
+
         const {history,location,match}=this.props.routerMatch
         const boyId=window.localStorage.id;
+
+        console.log("完成订单页面\n----------------------");
+        console.log(location);
+
+        let lotName=location.state!=undefined?location.state.parkingLot.name:"";
 
         return (
             <div>
@@ -42,9 +65,14 @@ export default class ParkingOrderFinishing extends Component {
                 <WhiteSpace size="md" />
                 <WhiteSpace size="md" />
                 <List>
-                    <Link to={`/employees/${boyId}/parkingLots`}>
-                        <Item arrow="horizontal" onClick={()=>this.props.selectParkingLots(boyId)}> 选择停车地点</Item>
-                    </Link>
+
+                        <Item extra={lotName} arrow="horizontal" onClick={()=>{
+                                this.props.selectParkingLots(boyId)
+                                const orderId=match.params.orderId
+                                history.push(`/employees/${boyId}/orders/${orderId}/parkingLots`)
+
+                            }}> 选择停车地点</Item>
+
                 </List>
 
                 <WhiteSpace size="md" />
@@ -56,7 +84,9 @@ export default class ParkingOrderFinishing extends Component {
                 <WhiteSpace size="md" />
                 <WhiteSpace size="md" />
                 <WingBlank size="lg">
-                    <Button type="primary">完成订单</Button>
+                    <Button type="primary" onClick={
+                            this.finshiOrder
+                        }>完成订单</Button>
                 </WingBlank>
             </div>
         );
