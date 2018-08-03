@@ -1,4 +1,4 @@
-import { getOrders, scramble ,getWorkingList} from "../actions/index";
+import { getOrders, scramble ,getWorkingList,getParkingLotsAction} from "../actions/index";
 import axios from "axios";
 import Access_Token from "../constant/Access_token"
 
@@ -9,8 +9,7 @@ const boyApi = {
     datas: {
         orders: [],
         works: [],
-
-        filter: "all"
+        parkingLots:[],
     },
     qiangdan(dispatch, orderId, boyId) {
         axios
@@ -60,6 +59,25 @@ const boyApi = {
                     return { id,type, carId, createdDate };
                 });
                 dispatch(getWorkingList(this.datas.works));
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    },
+
+    getParkingLotsByBoyId(dispatch,boyId){
+        // const boyId=window.localStorage.id;
+        
+        axios
+            .get(`http://localhost:9090/employees/${boyId}/parkingLots`)
+            .then(response => {
+                console.log("点击选择停车场按钮的请求结果\n----------------------")
+                console.log(response);
+                this.datas.parkingLots = response.data.map(lot => {
+                    const { id,name, size, initSize } = lot;
+                    return { id,name, size, initSize };
+                });
+                dispatch(getParkingLotsAction(this.datas.parkingLots));
             })
             .catch(function(error) {
                 console.log(error);

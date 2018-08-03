@@ -17,7 +17,16 @@ export default class ParkingLotList extends Component {
         const {history,location,match}=this.props.routerMatch
         console.log("停车场列表\n------------------------");
         console.log(match);
-        let selection=0;
+        let parkingLotItems=this.props.parkingLots.map(lot=>{
+            const {id,name,size,initSize}=lot
+            return (
+                <RadioItem
+                key={id}
+                >
+                {name} ({size/initSize})
+                </RadioItem>
+            )
+        })
         return (
             <div>
             <NavBar
@@ -27,21 +36,7 @@ export default class ParkingLotList extends Component {
                 停车地点
             </NavBar>
                 <List>
-                    <RadioItem
-                        key={1}
-                        checked={selection===1}
-                        onChange={() => selection=1}
-                    >
-                        停车场1
-                    </RadioItem>
-                    <RadioItem
-                        key={2}
-                        checked={selection===2}
-                        onChange={() => selection=2}
-
-                    >
-                        停车场A
-                    </RadioItem>
+                    {parkingLotItems}
                 </List>
             </div>
         );

@@ -23,11 +23,11 @@ export default class Interface extends Component {
     };
 
     finishParkingOrderPage=(match)=>{
-        return (<ParkingOrderFinishing routerMatch={match}/>)
+        return (<ParkingOrderFinishing routerMatch={match} selectParkingLots={this.props.findMyParkingLots}/>)
     }
 
     myParkingLotPage=(match)=>{
-        return (<ParkingLotList works={this.props.parkingLots} routerMatch={match}/>)
+        return (<ParkingLotList parkingLots={this.props.parkingLots} routerMatch={match}/>)
     }
 
     render() {

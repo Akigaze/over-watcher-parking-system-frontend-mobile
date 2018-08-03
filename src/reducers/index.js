@@ -23,6 +23,11 @@ export default (
             let newState = {unFinishOrders,works:action.works,parkingLots}
             return newState;
         }
+        case "PARKING": {
+            let {unFinishOrders,works,parkingLots}=state;
+            let newState = {unFinishOrders,works,parkingLots:action.parkingLots}
+            return newState;
+        }
         default:
             return state;
     }

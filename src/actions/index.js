@@ -19,3 +19,7 @@ export const getWorkingList = works => ({
     type: "WORKING",
     works
 });
+export const getParkingLotsAction = parkingLots => ({
+    type: "PARKING",
+    parkingLots
+});

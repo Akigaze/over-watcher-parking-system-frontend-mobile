@@ -27,6 +27,7 @@ export default class ParkingOrderFinishing extends Component {
         console.log(this.props.routerMatch.match);
         const {history,location,match}=this.props.routerMatch
         const boyId=window.localStorage.id;
+
         return (
             <div>
                 <NavBar
@@ -42,7 +43,7 @@ export default class ParkingOrderFinishing extends Component {
                 <WhiteSpace size="md" />
                 <List>
                     <Link to={`/employees/${boyId}/parkingLots`}>
-                        <Item arrow="horizontal"> 选择停车地点</Item>
+                        <Item arrow="horizontal" onClick={()=>this.props.selectParkingLots(boyId)}> 选择停车地点</Item>
                     </Link>
                 </List>
 
