@@ -84,7 +84,7 @@ const boyApi = {
             });
     },
 
-    finishOrder(dispatch,parkingLotId,orderId){
+    finishOrder(dispatch,parkingLotId,orderId,close){
         axios
             .put(`http://localhost:9090/orders/${orderId}/parkingLot/${parkingLotId}`,{
                 headers:{"Authorization":token}
@@ -92,7 +92,8 @@ const boyApi = {
             .then(response => {
                 console.log("点击选择停车场按钮的请求结果\n----------------------")
                 console.log(response);
-                const order = response.data.order
+                const order = response.data
+                close();
                 dispatch(finishOrderAction(order));
             })
             .catch(function(error) {

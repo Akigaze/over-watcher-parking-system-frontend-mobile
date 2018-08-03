@@ -24,20 +24,18 @@ export default class ParkingOrderFinishing extends Component {
         };
     }
 
-    setParkingLot=()=>{
-        const {history,location,match}=this.props.routerMatch
-        const lot=location.state.parkingLot
-        this.setState({
-            parkingLot: lot
-        })
-        return lot;
+    close=()=>{
+        Toast.info('停车完成 !!!', 1);
+        // console.log("停车成功\n-----------------------");
+        // console.log(this.props);
+        this.props.routerMatch.history.push("/employees")
     }
     finshiOrder=()=>{
         const {history,location,match}=this.props.routerMatch
         let lotId=location.state!=undefined?location.state.parkingLot.id:0;
         let orderId=match.params.orderId
-        if(orderId!==0){
-            this.props.finishOrder(lotId,orderId)
+        if(lotId!==0&&lotId!==undefined){
+            this.props.finishOrder(lotId,orderId,this.close)
         }else{
             Toast.info('未选择停车场 !!!', 1);
         }
