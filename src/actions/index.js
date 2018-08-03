@@ -32,3 +32,7 @@ export const unparkingAction = order => ({
     type: "UNPARKING",
     order
 });
+export const historyOrderAction = historyOrders => ({
+    type: "HISTORY",
+    historyOrders
+});

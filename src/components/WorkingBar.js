@@ -42,7 +42,7 @@ export default class WorkingBar extends Component {
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间{createdDate}</Brief>
+                            <Brief>停车时间 {createdDate}</Brief>
                         </Item>
                     </Link>
                 );
@@ -65,7 +65,7 @@ export default class WorkingBar extends Component {
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间{createdDate}</Brief>
+                            <Brief>停车时间 {createdDate}</Brief>
                         </Item>
                     </Link>
                 );

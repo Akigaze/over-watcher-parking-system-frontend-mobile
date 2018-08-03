@@ -43,8 +43,8 @@ export default class UnparkingPage extends Component {
                 <List>
                     <WingBlank size="lg">
                         <Item>车牌号码：{carId}</Item>
-                        <Item>取车时间：{Date.now()}</Item>
-                        <Item>停车场：</Item>
+                        <Item>取车时间：{new Date().toLocaleString()}</Item>
+
                     </WingBlank>
                 </List>
                 <WhiteSpace size="lg" />

@@ -10,6 +10,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import ParkingOrderFinishing from "./ParkingOrderFinishing"
 import ParkingLotList from "./ParkingLotList"
 import UnparkingPage from "./FinishUnparkingOrderPage"
+import HistoryOrderList from "./HistoryOrderList"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ export default class Interface extends Component {
         this.state = {
             selectedTab: "yellowTab"
         };
+        this.boyId=window.localStorage.id;
     }
 
     myWorkListPage = match => {
@@ -32,7 +34,6 @@ export default class Interface extends Component {
     }
     unparkingPage=(match)=>{
         return (<UnparkingPage clickFinish={this.props.onUnparking} routerMatch={match}/>)
-
     }
 
     render() {
@@ -177,13 +178,13 @@ export default class Interface extends Component {
                         key="历史"
                         selected={this.state.selectedTab === "greenTab"}
                         onPress={() => {
+                            this.props.findHistoryOrder(this.boyId)
                             this.setState({
                                 selectedTab: "greenTab"
                             });
                         }}
                     >
-                        <NavBar>历史</NavBar>
-                        {/*{this.renderContent('历史')}*/}
+                        <HistoryOrderList orderList={this.props.historyOrders}></HistoryOrderList>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={{
