@@ -18,6 +18,8 @@ export default class Interface extends Component {
     }
 
     render() {
+        console.log("Interface的match---------------------------");
+        console.log(this.props.match);
         return (
             <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0  }}>
                 <TabBar
@@ -79,7 +81,7 @@ export default class Interface extends Component {
                         }}
                     >
                     <BrowserRouter>
-                        <Route path="/employees" component={()=>{
+                        <Route path={`${this.props.match.match.url}`} component={()=>{
                             return (<WorkingBar works={this.props.works}/>)
                         }}/>
                     </BrowserRouter>
