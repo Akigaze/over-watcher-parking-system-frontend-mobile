@@ -22,9 +22,9 @@ export default class WorkingBar extends Component {
 
         let workList = works.map(order => {
             const { id, type, carId, createdDate } = order;
-            let path = `/employees/orders/${id}`;
 
             if (type == "存车") {
+                let path = `/employees/orders/${id}`;
                 return (
                     <Link to={path}>
                         <img
@@ -42,11 +42,12 @@ export default class WorkingBar extends Component {
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间{createdDate}</Brief>
+                            <Brief>停车时间 {createdDate}</Brief>
                         </Item>
                     </Link>
                 );
             } else if (type == "取车") {
+                let path = `/employees/unpark/orders/${carId}`;
                 return (
                     <Link to={path}>
                         <img
@@ -64,7 +65,7 @@ export default class WorkingBar extends Component {
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间{createdDate}</Brief>
+                            <Brief>停车时间 {createdDate}</Brief>
                         </Item>
                     </Link>
                 );

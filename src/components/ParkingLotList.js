@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavBar, List, Toast, Radio, Icon } from "antd-mobile";
+import { NavBar, List, Toast, Radio, Icon,WhiteSpace,WingBlank } from "antd-mobile";
 import Scramble from "./Scramble ";
 
 const Item = List.Item;
@@ -30,16 +30,21 @@ export default class ParkingLotList extends Component {
         let parkingLotItems = this.props.parkingLots.map(lot => {
             let { id, name, size, initSize } = lot;
             return (
-                <RadioItem
-                    key={id}
-                    checked={id == this.state.parkingLot.id}
-                    onChange={() => {
-                        console.log("=======  " + id + "  ===========");
-                        this.select(lot,size);
-                    }}
-                >
-                    {name} ( {size} / {initSize} )
-                </RadioItem>
+                <WingBlank size="sm">
+                    <RadioItem
+                        key={id}
+                        checked={id == this.state.parkingLot.id}
+                        onChange={() => {
+                            console.log("=======  " + id + "  ===========");
+                            this.select(lot,size);
+                        }}
+                        >
+                        <WhiteSpace size="md"/>
+                        {name} ( {size} / {initSize} )
+                        <WhiteSpace size="md"/>
+
+                    </RadioItem>
+                </WingBlank>
             );
         });
         return (

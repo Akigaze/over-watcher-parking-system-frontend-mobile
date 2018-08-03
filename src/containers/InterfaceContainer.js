@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) =>{
     return {
         unFinishOrders:state.unFinishOrders,
         works:state.works,
-        parkingLots:state.parkingLots
+        parkingLots:state.parkingLots,
+        historyOrders:state.historyOrders
     }
 }
 
@@ -20,7 +21,10 @@ const mapDispatchToProps = (dispatch, ownProps) =>{
         clickCQ:()=>{boyApi.findAllWork(dispatch)},
         onClickOrder:(orderId,boyId)=>{boyApi.qiangdan(dispatch,orderId,boyId)},
         findMyParkingLots:(boyId)=>{boyApi.getParkingLotsByBoyId(dispatch,boyId)},
-        onFinishOrder:(parkingLotId,orderId)=>{boyApi.finishOrder(dispatch,parkingLotId,orderId)}
+        onFinishOrder:(parkingLotId,orderId,close)=>{boyApi.finishOrder(dispatch,parkingLotId,orderId,close)},
+        onUnparking:(orderId,finish)=>{boyApi.unparking(dispatch,orderId,finish)},
+        findHistoryOrder:(boyId)=>{boyApi.findHistoryOrder(dispatch,boyId)}
+
     }
 }
 

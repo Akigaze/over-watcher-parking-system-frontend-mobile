@@ -9,6 +9,8 @@ import WorkingBar from "./WorkingBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import ParkingOrderFinishing from "./ParkingOrderFinishing"
 import ParkingLotList from "./ParkingLotList"
+import UnparkingPage from "./FinishUnparkingOrderPage"
+import HistoryOrderList from "./HistoryOrderList"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -16,6 +18,7 @@ export default class Interface extends Component {
         this.state = {
             selectedTab: "yellowTab"
         };
+        this.boyId=window.localStorage.id;
     }
 
     myWorkListPage = match => {
@@ -28,6 +31,9 @@ export default class Interface extends Component {
 
     myParkingLotPage=(match)=>{
         return (<ParkingLotList parkingLots={this.props.parkingLots} routerMatch={match}/>)
+    }
+    unparkingPage=(match)=>{
+        return (<UnparkingPage clickFinish={this.props.onUnparking} routerMatch={match}/>)
     }
 
     render() {
@@ -134,9 +140,16 @@ export default class Interface extends Component {
                                 <Route
                                     path={`${
                                         this.props.match.match.url
+                                    }/unpark/orders/:carId`}
+                                    component={this.unparkingPage}
+                                />
+                                <Route
+                                    path={`${
+                                        this.props.match.match.url
                                     }/:boyId/orders/:orderId/parkingLots`}
                                     component={this.myParkingLotPage}
                                 />
+
                             </div>
                         </BrowserRouter>
                     </TabBar.Item>
@@ -165,13 +178,13 @@ export default class Interface extends Component {
                         key="历史"
                         selected={this.state.selectedTab === "greenTab"}
                         onPress={() => {
+                            this.props.findHistoryOrder(this.boyId)
                             this.setState({
                                 selectedTab: "greenTab"
                             });
                         }}
                     >
-                        <NavBar>历史</NavBar>
-                        {/*{this.renderContent('历史')}*/}
+                        <HistoryOrderList orderList={this.props.historyOrders}></HistoryOrderList>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={{
