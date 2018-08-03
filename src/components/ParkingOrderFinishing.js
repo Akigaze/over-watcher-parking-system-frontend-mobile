@@ -33,10 +33,11 @@ export default class ParkingOrderFinishing extends Component {
         return lot;
     }
     finshiOrder=()=>{
-        const lot=this.setParkingLot();
-        const orderId=this.match.params.orderId
-        if(lot!={}){
-            this.props.finishOrder(lot.id,orderId)
+        const {history,location,match}=this.props.routerMatch
+        let lotId=location.state!=undefined?location.state.parkingLot.id:0;
+        let orderId=match.params.orderId
+        if(orderId!==0){
+            this.props.finishOrder(lotId,orderId)
         }else{
             Toast.info('未选择停车场 !!!', 1);
         }

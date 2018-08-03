@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7730b7a-50e2-4af4-ab9e-cb80ae3d5252" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/API/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Interface.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interface.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ParkingLotList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingLotList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ParkingOrderFinishing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingOrderFinishing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,13 +64,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Order.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Order.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParkingOrderFinishing.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/ParkingOrderFinishing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -293,7 +306,7 @@
       <option name="presentableId" value="Default" />
       <updated>1533192090459</updated>
       <workItem from="1533192092057" duration="7353000" />
-      <workItem from="1533278498416" duration="1986000" />
+      <workItem from="1533278498416" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="bale,quinn:mobile login">
       <created>1533192208252</created>
@@ -365,11 +378,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533283336497</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[Quinn] get the selected parkingLot">
+      <created>1533287332029</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1533287332029</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9339000" />
+    <option name="totallyTimeSpent" value="10086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -420,7 +440,8 @@
     <MESSAGE value="[Quinn] add select parkingLot page" />
     <MESSAGE value="[Quinn] get parking boy's parkingLots from server" />
     <MESSAGE value="[Quinn] select parking Lot to ready park" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Quinn] select parking Lot to ready park" />
+    <MESSAGE value="[Quinn] get the selected parkingLot" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Quinn] get the selected parkingLot" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/index.js">
@@ -543,6 +564,16 @@
           <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ParkingOrderFinishing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

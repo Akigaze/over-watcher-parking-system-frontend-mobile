@@ -1,4 +1,4 @@
-import { getOrders, scramble ,getWorkingList,getParkingLotsAction} from "../actions/index";
+import { getOrders, scramble ,getWorkingList,getParkingLotsAction,finishOrderAction} from "../actions/index";
 import axios from "axios";
 import Access_Token from "../constant/Access_token"
 
@@ -67,7 +67,7 @@ const boyApi = {
 
     getParkingLotsByBoyId(dispatch,boyId){
         // const boyId=window.localStorage.id;
-        
+
         axios
             .get(`http://localhost:9090/employees/${boyId}/parkingLots`)
             .then(response => {
@@ -78,6 +78,22 @@ const boyApi = {
                     return { id,name, size, initSize };
                 });
                 dispatch(getParkingLotsAction(this.datas.parkingLots));
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    },
+
+    finishOrder(dispatch,parkingLotId,orderId){
+        axios
+            .put(`http://localhost:9090/orders/${orderId}/parkingLot/${parkingLotId}`,{
+                headers:{"Authorization":token}
+            })
+            .then(response => {
+                console.log("点击选择停车场按钮的请求结果\n----------------------")
+                console.log(response);
+                const order = response.data.order
+                dispatch(finishOrderAction(order));
             })
             .catch(function(error) {
                 console.log(error);

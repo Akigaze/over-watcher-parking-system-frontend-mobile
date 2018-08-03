@@ -23,3 +23,7 @@ export const getParkingLotsAction = parkingLots => ({
     type: "PARKING",
     parkingLots
 });
+export const finishOrderAction = order => ({
+    type: "FINISHPARKING",
+    order
+});
