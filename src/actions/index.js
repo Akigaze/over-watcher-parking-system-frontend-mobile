@@ -27,3 +27,8 @@ export const finishOrderAction = order => ({
     type: "FINISHPARKING",
     order
 });
+
+export const unparkingAction = order => ({
+    type: "UNPARKING",
+    order
+});

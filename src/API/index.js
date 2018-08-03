@@ -1,4 +1,4 @@
-import { getOrders, scramble ,getWorkingList,getParkingLotsAction,finishOrderAction} from "../actions/index";
+import { getOrders, scramble ,getWorkingList,getParkingLotsAction,finishOrderAction,unparkingAction} from "../actions/index";
 import axios from "axios";
 import Access_Token from "../constant/Access_token"
 
@@ -95,6 +95,23 @@ const boyApi = {
                 const order = response.data
                 close();
                 dispatch(finishOrderAction(order));
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    },
+    unparking(dispatch,carId,finish){
+        
+        axios
+            .put(`http://localhost:9090/orders/boyUnParkCarId?boyUnParkCarId=${carId}`,{
+                headers:{"Authorization":token}
+            })
+            .then(response => {
+                console.log("点击完成取车按钮的请求结果\n----------------------")
+                console.log(response);
+                const order = response.data
+                finish();
+                dispatch(unparkingAction(order));
             })
             .catch(function(error) {
                 console.log(error);

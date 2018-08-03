@@ -9,6 +9,7 @@ import WorkingBar from "./WorkingBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import ParkingOrderFinishing from "./ParkingOrderFinishing"
 import ParkingLotList from "./ParkingLotList"
+import UnparkingPage from "./FinishUnparkingOrderPage"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -28,6 +29,10 @@ export default class Interface extends Component {
 
     myParkingLotPage=(match)=>{
         return (<ParkingLotList parkingLots={this.props.parkingLots} routerMatch={match}/>)
+    }
+    unparkingPage=(match)=>{
+        return (<UnparkingPage clickFinish={this.props.onUnparking} routerMatch={match}/>)
+
     }
 
     render() {
@@ -134,9 +139,16 @@ export default class Interface extends Component {
                                 <Route
                                     path={`${
                                         this.props.match.match.url
+                                    }/unpark/orders/:carId`}
+                                    component={this.unparkingPage}
+                                />
+                                <Route
+                                    path={`${
+                                        this.props.match.match.url
                                     }/:boyId/orders/:orderId/parkingLots`}
                                     component={this.myParkingLotPage}
                                 />
+
                             </div>
                         </BrowserRouter>
                     </TabBar.Item>

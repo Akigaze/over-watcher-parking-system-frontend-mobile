@@ -36,6 +36,14 @@ export default (
             const newState={unFinishOrders,works:newWorks,parkingLots}
             return newState;
         }
+        case "UNPARKING": {
+            let unFinishOrders=[...state.unFinishOrders]
+            let works=[...state.works]
+            let parkingLots=[...state.parkingLots]
+            let newWorks = removeOrder(works,action.order)
+            const newState={unFinishOrders,works:newWorks,parkingLots}
+            return newState;
+        }
         default:
             return state;
     }
