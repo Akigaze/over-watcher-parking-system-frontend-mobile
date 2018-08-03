@@ -8,6 +8,7 @@ import QiangDanBar from "./QiangDanBar";
 import WorkingBar from "./WorkingBar";
 import { BrowserRouter, Route } from "react-router-dom";
 import ParkingOrderFinishing from "./ParkingOrderFinishing"
+import ParkingLotList from "./ParkingLotList"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -24,14 +25,15 @@ export default class Interface extends Component {
     finishParkingOrderPage=(match)=>{
         return (<ParkingOrderFinishing routerMatch={match}/>)
     }
-    //
-    // myParkingLotPage=(match)=>{
-    //     return (<ParkingLotList works={this.props.works} routerMatch={match}/>)
-    // }
+
+    myParkingLotPage=(match)=>{
+        return (<ParkingLotList works={this.props.parkingLots} routerMatch={match}/>)
+    }
 
     render() {
         console.log("Interface的match---------------------------");
         console.log(this.props.match);
+        const {history,location,match}=this.props.match
         return (
             <div
                 style={{
@@ -71,12 +73,13 @@ export default class Interface extends Component {
                         }
                         selected={this.state.selectedTab === "blueTab"}
                         onPress={() => {
+                            history.push("/employees")
+
                             this.props.clickQD();
                             this.setState({
                                 selectedTab: "blueTab"
                             });
                         }}
-                        dot
                     >
                         <QiangDanBar
                             unFinishOrders={this.props.unFinishOrders}
@@ -109,6 +112,7 @@ export default class Interface extends Component {
                         key="停取"
                         selected={this.state.selectedTab === "redTab"}
                         onPress={() => {
+                            history.push("/employees")
                             this.props.clickCQ();
                             this.setState({
                                 selectedTab: "redTab"
@@ -131,9 +135,7 @@ export default class Interface extends Component {
                                     path={`${
                                         this.props.match.match.url
                                     }/:boyId/parkingLots`}
-                                    component={() => {
-                                        return <h1>000000000000000000000</h1>;
-                                    }}
+                                    component={this.myParkingLotPage}
                                 />
                             </div>
                         </BrowserRouter>
