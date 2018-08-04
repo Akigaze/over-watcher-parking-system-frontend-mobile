@@ -42,7 +42,8 @@ const boyApi = {
     },
     findAllOrders(dispatch) {
         axios
-            .get("http://localhost:9090/orders/status?status=无人处理", {
+            .get("http://localhost:9090/orders/status?status=无人处理",
+            {
                 headers: { Authorization: token }
             })
             .then(response => {
@@ -65,7 +66,10 @@ const boyApi = {
     findAllWork(dispatch) {
         const boyId = window.localStorage.id;
         axios
-            .get(`http://localhost:9090/orders/after/${boyId}`)
+            .get(`http://localhost:9090/orders/after/${boyId}`,
+                {
+                    headers: { Authorization: token }
+                })
             .then(response => {
                 console.log("点击存取按钮的请求结果\n----------------------");
                 console.log(response);
@@ -89,7 +93,10 @@ const boyApi = {
         // const boyId=window.localStorage.id;
 
         axios
-            .get(`http://localhost:9090/employees/${boyId}/parkingLots`)
+            .get(`http://localhost:9090/employees/${boyId}/parkingLots`,
+                {
+                    headers: { Authorization: token }
+                })
             .then(response => {
                 console.log(
                     "点击选择停车场按钮的请求结果\n----------------------"
