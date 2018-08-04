@@ -50,11 +50,11 @@ const boyApi = {
                 console.log("抢单按钮的请求结果\n----------------------");
                 console.log(response);
                 this.datas.orders = response.data.map(order => {
-                    const { id, carId, createdDate } = order;
+                    const { id, carId, time } = order;
                     return {
                         id,
                         carId,
-                        createdDate: formatDate(createdDate)
+                        createdDate: formatDate(time)
                     };
                 });
                 dispatch(getOrders(this.datas.orders));
@@ -74,12 +74,13 @@ const boyApi = {
                 console.log("点击存取按钮的请求结果\n----------------------");
                 console.log(response);
                 this.datas.works = response.data.map(order => {
-                    const { id, type, carId, createdDate } = order;
+                    const { id, type, carId, time,name } = order;
                     return {
                         id,
                         type,
                         carId,
-                        createdDate: formatDate(createdDate)
+                        parkingLotName:name,
+                        createdDate: formatDate(time)
                     };
                 });
                 dispatch(getWorkingList(this.datas.works));
@@ -157,7 +158,7 @@ const boyApi = {
     },
     findHistoryOrder(dispatch, boyId) {
         axios
-            .get(`http://localhost:9090/orders/ordersHistory/${boyId}`, {
+            .get(`http://localhost:9090/orders/parkingBoy/${boyId}`, {
                 headers: { Authorization: token }
             })
             .then(response => {

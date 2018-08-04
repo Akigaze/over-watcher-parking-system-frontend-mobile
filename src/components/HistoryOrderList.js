@@ -16,7 +16,7 @@ export default class HistoryOrderList extends Component {
                 <Item >
                 <WhiteSpace size="md"/>
                     车牌号：{carId} ({status})
-                    <Brief>停车时间{createdDate}</Brief>
+                    <Brief>停车时间: {createdDate}</Brief>
                 </Item>
             );
         });
