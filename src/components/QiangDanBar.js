@@ -12,7 +12,7 @@ export default class QiangDan extends Component {
             selectedTab: "yellowTab"
         };
     }
-    showToast() {
+    success() {
         Toast.info("抢单成功！！！", 1);
     }
     render() {
@@ -25,8 +25,8 @@ export default class QiangDan extends Component {
                     extra="抢单"
                     arrow="horizontal"
                     onClick={() => {
-                        clickOrder(id, boyId);
-                        this.showToast()
+                        clickOrder(id, boyId,this.success);
+                        this.success()
                     }}
                 >
                     车牌号：{carId}

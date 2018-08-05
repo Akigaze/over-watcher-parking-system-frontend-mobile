@@ -41,6 +41,7 @@ export default class Interface extends Component {
         console.log("Interface的match---------------------------");
         console.log(this.props.match);
         const {history,location,match}=this.props.match
+        const userId=window.localStorage.id;
         return (
             <div
                 style={{
@@ -200,12 +201,13 @@ export default class Interface extends Component {
                         key="个人"
                         selected={this.state.selectedTab === "yellowTab"}
                         onPress={() => {
+                            this.props.findMyParkingLots(userId)
                             this.setState({
                                 selectedTab: "yellowTab"
                             });
                         }}
                     >
-                        <PrivatePage/>
+                        <PrivatePage parkingLots={this.props.parkingLots} getparkingLots={this.props.findMyParkingLots}/>
                     </TabBar.Item>
                 </TabBar>
             </div>
