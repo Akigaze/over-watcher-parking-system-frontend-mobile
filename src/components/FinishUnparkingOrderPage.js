@@ -54,7 +54,7 @@ export default class UnparkingPage extends Component {
                 <WingBlank size="lg">
                     <Button type="primary" onClick={()=>{
                             this.props.clickFinish(carId,this.finish)
-                            Toast.info("取车中...",0)
+                            Toast.info("取车中...",3)
                         }}>完成取车</Button>
                 </WingBlank>
             </div>
