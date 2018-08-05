@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7730b7a-50e2-4af4-ab9e-cb80ae3d5252" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/API/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Interface.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interface.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivatePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +18,14 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="LoginForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/LoginForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="399">
+              <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -33,7 +33,7 @@
       <file leaf-file-name="QiangDanBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/QiangDanBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="152">
               <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingOrderFinishing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParkingOrderFinishing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ParkingOrderFinishing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="806">
+              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -56,12 +56,16 @@
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-216" />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-615" />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="lock.png" pinned="false" current-in-tab="false">
@@ -82,22 +86,22 @@
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../api-testing-practice" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../demo" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../flyway-demo" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../guess-number-kata" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../java-collection-basic" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../jpa-specific-practice-master" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../junit5-tdd-stack" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../oo-basic-step-by-step-example-java" value="PREVIEW" />
+        <entry key="$USER_HOME$/api-testing-practice" value="PREVIEW" />
+        <entry key="$USER_HOME$/demo" value="PREVIEW" />
+        <entry key="$USER_HOME$/flyway-demo" value="PREVIEW" />
+        <entry key="$USER_HOME$/guess-number-kata" value="PREVIEW" />
+        <entry key="$USER_HOME$/java-collection-basic" value="PREVIEW" />
+        <entry key="$USER_HOME$/jpa-specific-practice-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/junit5-tdd-stack" value="PREVIEW" />
+        <entry key="$USER_HOME$/oo-basic-step-by-step-example-java" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../OverWatcher-parkingSystem-backend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../smell-code-to-clean-code-word-frequency" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-boot-basic-emp" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-boot-company" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-data-db" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-db-practice" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-docker-mysql" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../spring-parking-lot" value="PREVIEW" />
+        <entry key="$USER_HOME$/smell-code-to-clean-code-word-frequency" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-boot-basic-emp" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-boot-company" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-data-db" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-db-practice" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-docker-mysql" value="PREVIEW" />
+        <entry key="$USER_HOME$/spring-parking-lot" value="PREVIEW" />
         <entry key="D:/MyNote/homework-ref/multi-layer-tests-in-spring-master" value="PREVIEW" />
       </map>
     </option>
@@ -106,6 +110,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/components/LoginForm.js" />
       </list>
     </option>
   </component>
@@ -131,7 +136,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="29" />
     <option name="y" value="82" />
     <option name="width" value="1440" />
@@ -142,61 +147,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="over-watcher-parking-system-frontend-mobile" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OverWatcher-parkingSystem-frontend-mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,7 +250,8 @@
       <workItem from="1533192092057" duration="7353000" />
       <workItem from="1533278498416" duration="2733000" />
       <workItem from="1533439892234" duration="632000" />
-      <workItem from="1533460019155" duration="1424000" />
+      <workItem from="1533460019155" duration="828000" />
+      <workItem from="1533491352120" duration="2947000" />
     </task>
     <task id="LOCAL-00001" summary="bale,quinn:mobile login">
       <created>1533192208252</created>
@@ -358,49 +334,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12142000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="14493000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1923077" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32916668" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053704" side_tool="true" visible="true" weight="0.32916668" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50105375" side_tool="true" weight="0.27233115" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946293" weight="0.24583334" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946293" visible="true" weight="0.32916668" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26100966" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49894625" visible="true" weight="0.21786493" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,6 +390,48 @@
     <option name="LAST_COMMIT_MESSAGE" value="[Quinn] get the selected parkingLot" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LoginForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/QiangDanBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pic/lock.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ParkingOrderFinishing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -545,25 +555,12 @@
     <entry file="file://$PROJECT_DIR$/src/containers/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.js___jb_old___" />
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LoginForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/loginApi.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Scramble .js" />
     <entry file="file://$PROJECT_DIR$/src/components/QiangDanBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="152">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -574,8 +571,28 @@
     <entry file="file://$PROJECT_DIR$/src/components/Order.js" />
     <entry file="file://$PROJECT_DIR$/src/components/ParkingOrderFinishing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="806">
+          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LoginForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
