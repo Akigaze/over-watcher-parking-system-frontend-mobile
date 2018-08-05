@@ -21,7 +21,7 @@ const boyApi = {
         historyOrders: [],
         parkingLots: []
     },
-    qiangdan(dispatch, orderId, boyId) {
+    qiangdan(dispatch, orderId, boyId,finish) {
         axios
             .put(
                 `/orders/${orderId}/parkingBoy/${boyId}`,
@@ -35,6 +35,7 @@ const boyApi = {
                 );
                 console.log(response);
                 const order = response.data;
+                // finish()
                 dispatch(scramble(order));
             })
             .catch(function(error) {

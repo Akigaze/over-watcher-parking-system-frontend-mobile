@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7730b7a-50e2-4af4-ab9e-cb80ae3d5252" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Interface.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PrivatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivatePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QiangDanBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QiangDanBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -273,7 +276,7 @@
       <workItem from="1533192092057" duration="7353000" />
       <workItem from="1533278498416" duration="2733000" />
       <workItem from="1533439892234" duration="632000" />
-      <workItem from="1533460019155" duration="823000" />
+      <workItem from="1533460019155" duration="828000" />
     </task>
     <task id="LOCAL-00001" summary="bale,quinn:mobile login">
       <created>1533192208252</created>
@@ -356,26 +359,26 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11541000" />
+    <option name="totallyTimeSpent" value="11546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32916668" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50053704" side_tool="true" visible="true" weight="0.24583334" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053704" side_tool="true" visible="true" weight="0.32916668" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946293" visible="true" weight="0.24583334" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32916668" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946293" weight="0.24583334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946293" visible="true" weight="0.32916668" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26100966" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -389,7 +392,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
