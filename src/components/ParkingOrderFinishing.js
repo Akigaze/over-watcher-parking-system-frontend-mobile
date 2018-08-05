@@ -25,6 +25,7 @@ export default class ParkingOrderFinishing extends Component {
     }
 
     close=()=>{
+        Toast.hide()
         Toast.info('停车完成 !!!', 1);
         // console.log("停车成功\n-----------------------");
         // console.log(this.props);
@@ -36,6 +37,8 @@ export default class ParkingOrderFinishing extends Component {
         let orderId=match.params.orderId
         if(lotId!==0&&lotId!==undefined){
             this.props.finishOrder(lotId,orderId,this.close)
+            Toast.info("停车中...",0)
+
         }else{
             Toast.info('未选择停车场 !!!', 1);
         }

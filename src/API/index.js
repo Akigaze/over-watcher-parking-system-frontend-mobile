@@ -35,7 +35,7 @@ const boyApi = {
                 );
                 console.log(response);
                 const order = response.data;
-                // finish()
+                finish()
                 dispatch(scramble(order));
             })
             .catch(function(error) {

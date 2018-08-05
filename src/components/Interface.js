@@ -90,6 +90,7 @@ export default class Interface extends Component {
                         }}
                     >
                         <QiangDanBar
+                            parkingLots={this.props.parkingLots}
                             unFinishOrders={this.props.unFinishOrders}
                             clickOrder={this.props.onClickOrder}
                         />

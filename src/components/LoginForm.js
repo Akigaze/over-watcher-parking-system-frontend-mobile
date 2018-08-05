@@ -39,7 +39,6 @@ export default class LoginForm extends Component {
         } else {
             LoginApi.tryToLogin(name,password,this)
             Toast.loading("正在登录", 0)
-
         }
     };
 

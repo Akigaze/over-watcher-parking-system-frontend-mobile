@@ -18,6 +18,7 @@ export default class UnparkingPage extends Component {
         super(props);
     }
     finish=()=>{
+        Toast.hide()
         Toast.info('取车完成 !!!', 1);
         this.props.routerMatch.history.push("/employees")
     }
@@ -51,7 +52,10 @@ export default class UnparkingPage extends Component {
                 <WhiteSpace size="lg" />
                 <WhiteSpace size="lg" />
                 <WingBlank size="lg">
-                    <Button type="primary" onClick={()=>this.props.clickFinish(carId,this.finish)}>完成取车</Button>
+                    <Button type="primary" onClick={()=>{
+                            this.props.clickFinish(carId,this.finish)
+                            Toast.info("取车中...",0)
+                        }}>完成取车</Button>
                 </WingBlank>
             </div>
         );
