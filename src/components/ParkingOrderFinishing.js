@@ -37,7 +37,7 @@ export default class ParkingOrderFinishing extends Component {
         let orderId=match.params.orderId
         if(lotId!==0&&lotId!==undefined){
             this.props.finishOrder(lotId,orderId,this.close)
-            Toast.info("停车中...",0)
+            Toast.info("停车中...",3)
 
         }else{
             Toast.info('未选择停车场 !!!', 1);

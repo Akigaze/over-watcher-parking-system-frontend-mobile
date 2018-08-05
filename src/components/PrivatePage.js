@@ -51,7 +51,7 @@ export default class PrivatePage extends Component {
     }
     checkIn = () => {
         const card=<img src="https://raw.githubusercontent.com/Akigaze/ita-homework-ref/master/quinn.png" onClick={()=>{this.props.checkIn(this.checkInSuccess)}}/>
-        Toast.info(card, 0)
+        Toast.info(card, 20)
     };
     render() {
         console.log("=== 个人页面 ===");
