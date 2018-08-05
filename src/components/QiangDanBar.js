@@ -15,6 +15,21 @@ export default class QiangDan extends Component {
     success() {
         Toast.info("抢单成功！！！", 1);
     }
+    qiangdaning() {
+        // if(this.props.parkingLots.length===0){
+        //     Toast.info("你还没有停车！！！", 1);
+        //     return;
+        // }
+        // this.props.parkingLots.forEach(lot=>{
+        //     if(lot.size>0){
+                Toast.info("疯狂抢单！！！", 0.5);
+        //         return
+        //     }
+        // })
+        // Toast.info("你没有空余的停车位！！！", 1);
+
+
+    }
     render() {
         const boyId = window.localStorage.id;
         const { unFinishOrders, clickOrder } = this.props;
@@ -26,7 +41,7 @@ export default class QiangDan extends Component {
                     arrow="horizontal"
                     onClick={() => {
                         clickOrder(id, boyId,this.success);
-                        this.success()
+                        this.qiangdaning()
                     }}
                 >
                     车牌号：{carId}

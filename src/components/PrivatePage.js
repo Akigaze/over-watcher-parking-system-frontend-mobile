@@ -38,11 +38,20 @@ export default class PrivatePage extends Component {
     }
     out = () => {
         this.props.history.push("/");
-        Toast.success("退出成功！",1)
+        Toast.success("退出成功！", 1);
     };
     signOuting = () => {
         boyApi.signOut();
-        Toast.loading("正在退出", 2, this.out)
+        Toast.loading("正在退出", 2, this.out);
+    };
+    checkInSuccess=()=>{
+        console.log("=== 打卡 ===")
+        Toast.hide()
+        Toast.success("打卡成功！",1)
+    }
+    checkIn = () => {
+        const card=<img src="https://raw.githubusercontent.com/Akigaze/ita-homework-ref/master/quinn.png" onClick={()=>{this.props.checkIn(this.checkInSuccess)}}/>
+        Toast.info(card, 0)
     };
     render() {
         console.log("=== 个人页面 ===");
@@ -103,9 +112,17 @@ export default class PrivatePage extends Component {
                     <div style={{ lineHeight: "30px", fontSize: 20 }}>
                         {window.localStorage.username}
                     </div>
-
-                    <WhiteSpace size="lg" />
-                    <WhiteSpace size="lg" />
+                    <Flex>
+                        <Flex.Item />
+                        <Flex.Item>
+                            <WhiteSpace size="lg" />
+                            <WingBlank>
+                                <Button type="primary" onClick={this.checkIn}>打卡</Button>
+                            </WingBlank>
+                        </Flex.Item>
+                        <Flex.Item />
+                    </Flex>
+                    <WhiteSpace size="md" />
                 </div>
 
                 <List renderHeader={() => "我的停车场"} className="my-list">

@@ -90,6 +90,7 @@ export default class Interface extends Component {
                         }}
                     >
                         <QiangDanBar
+                            parkingLots={this.props.parkingLots}
                             unFinishOrders={this.props.unFinishOrders}
                             clickOrder={this.props.onClickOrder}
                         />
@@ -207,7 +208,7 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <PrivatePage parkingLots={this.props.parkingLots} getparkingLots={this.props.findMyParkingLots} history={history}/>
+                        <PrivatePage checkIn={this.props.checkIn} parkingLots={this.props.parkingLots} getparkingLots={this.props.findMyParkingLots} history={history}/>
                     </TabBar.Item>
                 </TabBar>
             </div>

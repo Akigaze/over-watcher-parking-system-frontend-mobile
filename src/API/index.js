@@ -35,7 +35,7 @@ const boyApi = {
                 );
                 console.log(response);
                 const order = response.data;
-                // finish()
+                finish()
                 dispatch(scramble(order));
             })
             .catch(function(error) {
@@ -186,6 +186,24 @@ const boyApi = {
         window.localStorage.roles = null;
         window.localStorage.id = null;
         window.localStorage.username = null;
+    },
+    workingCheckIn(dispatch,finish){
+        const userId=window.localStorage.id
+        axios
+            .put(`/employees/status/${userId}`, {
+                headers: { Authorization: token }
+            })
+            .then(response => {
+                console.log("打卡结果\n----------------------");
+                console.log(response);
+                finish()
+                // dispatch(historyOrderAction(this.datas.historyOrders));
+
+
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
     }
 };
 

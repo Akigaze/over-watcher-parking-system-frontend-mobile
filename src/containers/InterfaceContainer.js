@@ -23,8 +23,8 @@ const mapDispatchToProps = (dispatch, ownProps) =>{
         findMyParkingLots:(boyId)=>{boyApi.getParkingLotsByBoyId(dispatch,boyId)},
         onFinishOrder:(parkingLotId,orderId,close)=>{boyApi.finishOrder(dispatch,parkingLotId,orderId,close)},
         onUnparking:(orderId,finish)=>{boyApi.unparking(dispatch,orderId,finish)},
-        findHistoryOrder:(boyId)=>{boyApi.findHistoryOrder(dispatch,boyId)}
-
+        findHistoryOrder:(boyId)=>{boyApi.findHistoryOrder(dispatch,boyId)},
+        checkIn:(finish)=>{boyApi.workingCheckIn(dispatch,finish)}
     }
 }
 

@@ -15,7 +15,8 @@ export const LoginApi = {
                 window.localStorage.roles = response.data.roles;
                 window.localStorage.id = response.data.id;
                 window.localStorage.username = response.data.username;
-                form.props.history.push("/employees");
+                // form.props.history.push("/employees");
+                form.success()
                 return "";
             })
             .catch(function(error) {
