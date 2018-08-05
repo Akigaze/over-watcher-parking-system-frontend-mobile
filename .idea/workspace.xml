@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/src/API/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Interface.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interface.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PrivatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivatePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QiangDanBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QiangDanBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/InterfaceContainer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -276,7 +275,7 @@
       <workItem from="1533192092057" duration="7353000" />
       <workItem from="1533278498416" duration="2733000" />
       <workItem from="1533439892234" duration="632000" />
-      <workItem from="1533460019155" duration="828000" />
+      <workItem from="1533460019155" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="bale,quinn:mobile login">
       <created>1533192208252</created>
@@ -359,10 +358,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11546000" />
+    <option name="totallyTimeSpent" value="12142000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946293" weight="0.32916668" />
