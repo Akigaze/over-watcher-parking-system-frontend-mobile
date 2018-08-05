@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 import Access_Token from "../constant/Access_token";
 
-axios.defaults.baseURL = "http://localhost:9090";
+axios.defaults.baseURL = "https://over-back.herokuapp.com";
 const token = window.localStorage.token;
 
 const boyApi = {
@@ -23,7 +23,7 @@ const boyApi = {
     qiangdan(dispatch, orderId, boyId) {
         axios
             .put(
-                `http://localhost:9090/orders/${orderId}/parkingBoy/${boyId}`,
+                `/orders/${orderId}/parkingBoy/${boyId}`,
                 {
                     headers: { Authorization: token }
                 }
@@ -42,7 +42,7 @@ const boyApi = {
     },
     findAllOrders(dispatch) {
         axios
-            .get("http://localhost:9090/orders/status?status=无人处理",
+            .get("/orders/status?status=无人处理",
             {
                 headers: { Authorization: token }
             })
@@ -50,11 +50,11 @@ const boyApi = {
                 console.log("抢单按钮的请求结果\n----------------------");
                 console.log(response);
                 this.datas.orders = response.data.map(order => {
-                    const { id, carId, time } = order;
+                    const { id, carId, createdDate } = order;
                     return {
                         id,
                         carId,
-                        createdDate: formatDate(time)
+                        createdDate: formatDate(createdDate)
                     };
                 });
                 dispatch(getOrders(this.datas.orders));
@@ -66,7 +66,7 @@ const boyApi = {
     findAllWork(dispatch) {
         const boyId = window.localStorage.id;
         axios
-            .get(`http://localhost:9090/orders/after/${boyId}`,
+            .get(`/orders/after/${boyId}`,
                 {
                     headers: { Authorization: token }
                 })
@@ -94,7 +94,7 @@ const boyApi = {
         // const boyId=window.localStorage.id;
 
         axios
-            .get(`http://localhost:9090/employees/${boyId}/parkingLots`,
+            .get(`/employees/${boyId}/parkingLots`,
                 {
                     headers: { Authorization: token }
                 })
@@ -117,7 +117,7 @@ const boyApi = {
     finishOrder(dispatch, parkingLotId, orderId, close) {
         axios
             .put(
-                `http://localhost:9090/orders/${orderId}/parkingLot/${parkingLotId}`,
+                `/orders/${orderId}/parkingLot/${parkingLotId}`,
                 {
                     headers: { Authorization: token }
                 }
@@ -138,7 +138,7 @@ const boyApi = {
     unparking(dispatch, carId, finish) {
         axios
             .put(
-                `http://localhost:9090/orders/boyUnParkCarId?boyUnParkCarId=${carId}`,
+                `/orders/boyUnParkCarId?boyUnParkCarId=${carId}`,
                 {
                     headers: { Authorization: token }
                 }
@@ -158,7 +158,7 @@ const boyApi = {
     },
     findHistoryOrder(dispatch, boyId) {
         axios
-            .get(`http://localhost:9090/orders/parkingBoy/${boyId}`, {
+            .get(`/orders/parkingBoy/${boyId}`, {
                 headers: { Authorization: token }
             })
             .then(response => {
