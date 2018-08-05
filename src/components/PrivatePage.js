@@ -10,7 +10,8 @@ import {
     NoticeBar,
     Flex,
     PlaceHolder,
-    NavBar
+    NavBar,
+    Toast
 } from "antd-mobile";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -35,6 +36,14 @@ export default class PrivatePage extends Component {
             username: "100fen"
         });
     }
+    out = () => {
+        this.props.history.push("/");
+        Toast.success("退出成功！",1)
+    };
+    signOuting = () => {
+        boyApi.signOut();
+        Toast.loading("正在退出", 2, this.out)
+    };
     render() {
         console.log("=== 个人页面 ===");
 
@@ -56,9 +65,28 @@ export default class PrivatePage extends Component {
         return (
             <div>
                 <NavBar>个人</NavBar>
+                <Flex alignContent="end">
+                    <Flex.Item />
+                    <Flex.Item />
+
+                    <Flex.Item>
+                        <Button
+                            type="primary"
+                            size="small"
+                            style={{
+                                margin: "10px",
+                                backgroundColor: "#e95410"
+                            }}
+                            onClick={this.signOuting}
+                        >
+                            退出
+                        </Button>
+                    </Flex.Item>
+                </Flex>
+
                 <img
                     src="http://bpic.588ku.com/back_pic/03/62/05/6957a98797c759a.jpg!/fh/300/quality/90/unsharp/true/compress/true"
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", marginTop: -50 }}
                 />
                 <div style={{ textAlign: "center" }}>
                     <img

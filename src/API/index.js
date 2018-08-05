@@ -180,8 +180,15 @@ const boyApi = {
             .catch(function(error) {
                 console.log(error);
             });
+    },
+    signOut(){
+        window.localStorage.token = null;
+        window.localStorage.roles = null;
+        window.localStorage.id = null;
+        window.localStorage.username = null;
     }
 };
+
 
 const formatDate = dataStr => {
     if ((dataStr !== null) && (dataStr !== undefined)) {

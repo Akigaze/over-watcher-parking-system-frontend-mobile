@@ -65,7 +65,7 @@ export default class Interface extends Component {
                                     width: "22px",
                                     height: "22px",
                                     background:
-                                        "url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat"
+                                        "url(https://raw.githubusercontent.com/Eugene-Armstrong/my-online-pics/master/qiangdan.png) center center /  21px 21px no-repeat"
                                 }}
                             />
                         }
@@ -75,7 +75,7 @@ export default class Interface extends Component {
                                     width: "22px",
                                     height: "22px",
                                     background:
-                                        "url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat"
+                                        "url(https://raw.githubusercontent.com/Eugene-Armstrong/my-online-pics/master/qiangdan_active.png) center center /  21px 21px no-repeat"
                                 }}
                             />
                         }
@@ -162,7 +162,7 @@ export default class Interface extends Component {
                                     width: "22px",
                                     height: "22px",
                                     background:
-                                        "url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat"
+                                        "url(https://raw.githubusercontent.com/Eugene-Armstrong/my-online-pics/master/history.png) center center /  21px 21px no-repeat"
                                 }}
                             />
                         }
@@ -172,7 +172,7 @@ export default class Interface extends Component {
                                     width: "22px",
                                     height: "22px",
                                     background:
-                                        "url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat"
+                                        "url(https://raw.githubusercontent.com/Eugene-Armstrong/my-online-pics/master/history_active.png) center center /  21px 21px no-repeat"
                                 }}
                             />
                         }
@@ -186,16 +186,16 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <HistoryOrderList orderList={this.props.historyOrders}></HistoryOrderList>
+                        <HistoryOrderList orderList={this.props.historyOrders} history={history}></HistoryOrderList>
                     </TabBar.Item>
                     <TabBar.Item
                         icon={{
                             uri:
-                                "https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg"
+                                "https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg"
                         }}
                         selectedIcon={{
                             uri:
-                                "https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg"
+                                "https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg"
                         }}
                         title="个人"
                         key="个人"
@@ -207,7 +207,7 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <PrivatePage parkingLots={this.props.parkingLots} getparkingLots={this.props.findMyParkingLots}/>
+                        <PrivatePage parkingLots={this.props.parkingLots} getparkingLots={this.props.findMyParkingLots} history={history}/>
                     </TabBar.Item>
                 </TabBar>
             </div>
