@@ -11,6 +11,7 @@ import ParkingOrderFinishing from "./ParkingOrderFinishing"
 import ParkingLotList from "./ParkingLotList"
 import UnparkingPage from "./FinishUnparkingOrderPage"
 import HistoryOrderList from "./HistoryOrderList"
+import PrivatePage from "./PrivatePage"
 
 export default class Interface extends Component {
     constructor(props) {
@@ -204,8 +205,7 @@ export default class Interface extends Component {
                             });
                         }}
                     >
-                        <NavBar>个人</NavBar>
-                        {/*{this.renderContent('个人')}*/}
+                        <PrivatePage/>
                     </TabBar.Item>
                 </TabBar>
             </div>
