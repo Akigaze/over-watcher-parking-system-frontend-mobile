@@ -19,15 +19,14 @@ export default class UnparkingPage extends Component {
     }
     finish=()=>{
         Toast.info('取车完成 !!!', 1);
-        console.log("取车成功\n-----------------------");
-        console.log(this.props);
         this.props.routerMatch.history.push("/employees")
     }
     render() {
         const { history, location, match } = this.props.routerMatch;
         const carId=match.params.carId;
-        console.log("取车的车牌号码\n----------------------");
-        console.log(carId);
+        const parkingLotName=location.state.parkingLotName
+        console.log("完成取车的停车场\n----------------------");
+        console.log(parkingLotName);
         return (
             <div>
                 <NavBar
@@ -44,7 +43,7 @@ export default class UnparkingPage extends Component {
                     <WingBlank size="lg">
                         <Item>车牌号码：{carId}</Item>
                         <Item>取车时间：{new Date().toLocaleString()}</Item>
-
+                        <Item>停车场：{parkingLotName}</Item>
                     </WingBlank>
                 </List>
                 <WhiteSpace size="lg" />

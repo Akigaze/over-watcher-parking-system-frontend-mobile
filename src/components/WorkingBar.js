@@ -21,8 +21,10 @@ export default class WorkingBar extends Component {
         let history = this.props.routerMatch.history;
 
         let workList = works.map(order => {
-            const { id, type, carId, createdDate } = order;
-
+            const { id, type, carId, createdDate,parkingLotName } = order;
+            const date=createdDate.substr(createdDate.indexOf("-")+1);
+            console.log("停车场\n--------------------------");
+            console.log(parkingLotName);
             if (type == "存车") {
                 let path = `/employees/orders/${id}`;
                 return (
@@ -42,14 +44,22 @@ export default class WorkingBar extends Component {
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间 {createdDate}</Brief>
+                            <Brief>停车时间 {date}</Brief>
                         </Item>
                     </Link>
                 );
             } else if (type == "取车") {
-                let path = `/employees/unpark/orders/${carId}`;
+                // let path = `/employees/orders/${id}/cars/${carId}`;
+                let path = `/employees/orders/${id}/cars/${carId}`;
                 return (
-                    <Link to={path}>
+                    <Link
+                        to={{
+                            pathname: `/employees/orders/${id}/cars/${carId}`,
+                            search: "",
+                            hash: "",
+                            state: { parkingLotName }
+                        }}
+                    >
                         <img
                             src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533228973796&di=7b911a1a35761c7396452333f858f2ed&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic2%2Fcover%2F00%2F32%2F95%2F58110de7b77ac_610.jpg"
                             style={{
@@ -60,12 +70,12 @@ export default class WorkingBar extends Component {
                             }}
                         />
                         <Item
-                            extra="去完成"
+                            extra={parkingLotName}
                             arrow="horizontal"
                             onClick={() => {}}
                         >
                             车牌号：{carId}
-                            <Brief>停车时间 {createdDate}</Brief>
+                            <Brief>停车时间 {date}</Brief>
                         </Item>
                     </Link>
                 );

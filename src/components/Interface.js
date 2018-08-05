@@ -33,7 +33,7 @@ export default class Interface extends Component {
         return (<ParkingLotList parkingLots={this.props.parkingLots} routerMatch={match}/>)
     }
     unparkingPage=(match)=>{
-        return (<UnparkingPage clickFinish={this.props.onUnparking} routerMatch={match}/>)
+        return (<UnparkingPage clickFinish={this.props.onUnparking} parkingLots={this.props.parkingLots} routerMatch={match}/>)
     }
 
     render() {
@@ -132,19 +132,19 @@ export default class Interface extends Component {
                                     component={this.myWorkListPage}
                                 />
                                 <Route
-                                    path={`${
+                                    exact path={`${
                                         this.props.match.match.url
                                     }/orders/:orderId`}
                                     component={this.finishParkingOrderPage}
                                 />
                                 <Route
-                                    path={`${
+                                    exact path={`${
                                         this.props.match.match.url
-                                    }/unpark/orders/:carId`}
+                                    }/orders/:orderId/cars/:carId`}
                                     component={this.unparkingPage}
                                 />
                                 <Route
-                                    path={`${
+                                    exact path={`${
                                         this.props.match.match.url
                                     }/:boyId/orders/:orderId/parkingLots`}
                                     component={this.myParkingLotPage}

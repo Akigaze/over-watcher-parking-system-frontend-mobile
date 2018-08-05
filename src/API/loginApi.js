@@ -1,9 +1,10 @@
 import axios from "axios";
+axios.defaults.baseURL = "https://over-back.herokuapp.com";
 
 export const LoginApi = {
     tryToLogin: (name, password,form) => {
         axios
-            .post("http://localhost:9090/auth/login", {
+            .post("/auth/login", {
                 username: name,
                 password: password
             })
